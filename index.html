@@ -17,213 +17,743 @@
       🎁 <span>EASY WIN</span>
     </div>
 
-    <div class="bell">🔔</div>
+    <button class="icon-btn" onclick="showNotification()">
+      🔔
+    </button>
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- ================= HOME PAGE ================= -->
+  <main id="homePage">
 
-    <h1>
-      SIRF <span>Rs.1</span> MEIN<br>
-      MOBILE YA BIKE<br>
-      <strong>JEETO!</strong>
-    </h1>
+    <!-- HERO -->
+    <section class="hero">
 
-    <div class="prize-icons">
+      <h1>
+        SIRF <span>Rs.1</span> MEIN<br>
+        MOBILE YA BIKE<br>
+        <strong>JEETO!</strong>
+      </h1>
+
+      <div class="prize-icons">
+
+        <div>
+          <div class="circle">🏍️</div>
+          <p>BIKE</p>
+        </div>
+
+        <div>
+          <div class="circle">📱</div>
+          <p>MOBILE</p>
+        </div>
+
+        <div>
+          <div class="circle">🎁</div>
+          <p>PRIZE</p>
+        </div>
+
+      </div>
+
+      <button class="main-btn" onclick="openPrize('Special Prize')">
+        ENTER NOW • Rs.1
+      </button>
+
+    </section>
+
+
+    <!-- LIVE DRAWS -->
+    <section class="section">
+
+      <div class="section-title">
+        <h2>Live Draws</h2>
+
+        <button class="view-all-btn" onclick="showPage('prizes')">
+          View All ›
+        </button>
+      </div>
+
+
+      <!-- BIKE -->
+      <div class="prize-card">
+
+        <div class="prize-image bike">
+          🏍️
+        </div>
+
+        <div class="prize-info">
+
+          <h3>Honda CG 125</h3>
+
+          <p>2026 Model</p>
+
+          <strong>Rs.1 / Entry</strong>
+
+          <small>👤 12,540 Entries</small>
+
+        </div>
+
+        <button onclick="openPrize('Honda CG 125 2026 Model')">
+          ENTER
+        </button>
+
+      </div>
+
+
+      <!-- IPHONE -->
+      <div class="prize-card">
+
+        <div class="prize-image phone">
+          📱
+        </div>
+
+        <div class="prize-info">
+
+          <h3>iPhone Pro Max</h3>
+
+          <p>256GB</p>
+
+          <strong>Rs.1 / Entry</strong>
+
+          <small>👤 8,765 Entries</small>
+
+        </div>
+
+        <button onclick="openPrize('iPhone Pro Max 256GB')">
+          ENTER
+        </button>
+
+      </div>
+
+
+      <!-- SAMSUNG -->
+      <div class="prize-card">
+
+        <div class="prize-image samsung">
+          📱
+        </div>
+
+        <div class="prize-info">
+
+          <h3>Samsung Galaxy</h3>
+
+          <p>Ultra 5G</p>
+
+          <strong>Rs.1 / Entry</strong>
+
+          <small>👤 6,342 Entries</small>
+
+        </div>
+
+        <button onclick="openPrize('Samsung Galaxy Ultra 5G')">
+          ENTER
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRUST -->
+    <section class="trust">
+
+      <div class="shield">🛡️</div>
 
       <div>
-        <div class="circle">🏍️</div>
-        <p>BIKE</p>
+        <h3>Secure & Trusted</h3>
+        <p>Your payment and data are protected.</p>
       </div>
 
-      <div>
-        <div class="circle">📱</div>
-        <p>MOBILE</p>
+    </section>
+
+
+    <!-- HOW TO PLAY -->
+    <section class="how">
+
+      <h2>How To Play</h2>
+
+      <div class="steps">
+
+        <div>
+          <span>1</span>
+          <h3>Choose Prize</h3>
+          <p>Select your favorite prize.</p>
+        </div>
+
+        <div>
+          <span>2</span>
+          <h3>Pay Rs.1</h3>
+          <p>Complete your entry.</p>
+        </div>
+
+        <div>
+          <span>3</span>
+          <h3>Get Ticket</h3>
+          <p>Receive your entry number.</p>
+        </div>
+
+        <div>
+          <span>4</span>
+          <h3>Winner</h3>
+          <p>Check winner announcement.</p>
+        </div>
+
       </div>
 
-      <div>
-        <div class="circle">🎁</div>
-        <p>PRIZE</p>
+    </section>
+
+  </main>
+
+
+  <!-- ================= PRIZES PAGE ================= -->
+
+  <main id="prizesPage" class="hidden-page">
+
+    <section class="page-header">
+      <button onclick="showPage('home')">←</button>
+
+      <h2>All Prizes</h2>
+    </section>
+
+    <section class="section">
+
+      <div class="prize-card">
+
+        <div class="prize-image bike">
+          🏍️
+        </div>
+
+        <div class="prize-info">
+          <h3>Honda CG 125</h3>
+          <p>2026 Model</p>
+          <strong>Rs.1 / Entry</strong>
+          <small>👤 12,540 Entries</small>
+        </div>
+
+        <button onclick="openPrize('Honda CG 125 2026 Model')">
+          ENTER
+        </button>
+
       </div>
 
-    </div>
 
-    <button class="main-btn" onclick="alert('Select your prize below!')">
-      ENTER NOW • Rs.1
-    </button>
+      <div class="prize-card">
 
-  </section>
+        <div class="prize-image phone">
+          📱
+        </div>
 
+        <div class="prize-info">
+          <h3>iPhone Pro Max</h3>
+          <p>256GB</p>
+          <strong>Rs.1 / Entry</strong>
+          <small>👤 8,765 Entries</small>
+        </div>
 
-  <!-- LIVE DRAWS -->
-  <section class="section">
+        <button onclick="openPrize('iPhone Pro Max 256GB')">
+          ENTER
+        </button>
 
-    <div class="section-title">
-      <h2>Live Draws</h2>
-      <span>View All ›</span>
-    </div>
-
-
-    <!-- BIKE -->
-    <div class="prize-card">
-
-      <div class="prize-image bike">
-        🏍️
       </div>
 
-      <div class="prize-info">
-        <h3>Honda CG 125</h3>
-        <p>2026 Model</p>
 
-        <strong>Rs.1 / Entry</strong>
+      <div class="prize-card">
 
-        <small>👤 12,540 Entries</small>
+        <div class="prize-image samsung">
+          📱
+        </div>
+
+        <div class="prize-info">
+          <h3>Samsung Galaxy</h3>
+          <p>Ultra 5G</p>
+          <strong>Rs.1 / Entry</strong>
+          <small>👤 6,342 Entries</small>
+        </div>
+
+        <button onclick="openPrize('Samsung Galaxy Ultra 5G')">
+          ENTER
+        </button>
+
       </div>
 
-      <button onclick="enterPrize('Honda CG 125')">
-        ENTER
+    </section>
+
+  </main>
+
+
+  <!-- ================= ENTRIES PAGE ================= -->
+
+  <main id="entriesPage" class="hidden-page">
+
+    <section class="page-header">
+      <button onclick="showPage('home')">←</button>
+
+      <h2>My Entries</h2>
+    </section>
+
+    <section class="empty-page">
+
+      <div class="big-icon">🎟️</div>
+
+      <h2>No Entries Yet</h2>
+
+      <p>
+        Your tickets will appear here after
+        you enter a prize draw.
+      </p>
+
+      <button class="main-btn small-btn"
+              onclick="showPage('prizes')">
+        VIEW PRIZES
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= WINNERS PAGE ================= -->
+
+  <main id="winnersPage" class="hidden-page">
+
+    <section class="page-header">
+      <button onclick="showPage('home')">←</button>
+
+      <h2>Winners</h2>
+    </section>
+
+    <section class="winner-list">
+
+      <div class="winner-card">
+        <div class="winner-avatar">👤</div>
+
+        <div>
+          <h3>Winner 1</h3>
+          <p>Mobile Prize</p>
+          <small>Winner announcement coming soon</small>
+        </div>
+
+        <span>🏆</span>
+      </div>
+
+
+      <div class="winner-card">
+        <div class="winner-avatar">👤</div>
+
+        <div>
+          <h3>Winner 2</h3>
+          <p>Bike Prize</p>
+          <small>Winner announcement coming soon</small>
+        </div>
+
+        <span>🏆</span>
+      </div>
+
+
+      <div class="winner-card">
+        <div class="winner-avatar">👤</div>
+
+        <div>
+          <h3>Winner 3</h3>
+          <p>Mobile Prize</p>
+          <small>Winner announcement coming soon</small>
+        </div>
+
+        <span>🏆</span>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= ACCOUNT PAGE ================= -->
+
+  <main id="accountPage" class="hidden-page">
+
+    <section class="page-header">
+      <button onclick="showPage('home')">←</button>
+
+      <h2>Account</h2>
+    </section>
+
+    <section class="account-box">
+
+      <div class="profile-icon">
+        👤
+      </div>
+
+      <h2>Welcome to Easy Win</h2>
+
+      <p>
+        Login to manage your entries and profile.
+      </p>
+
+      <button class="main-btn"
+              onclick="loginMessage()">
+        LOGIN / SIGN UP
+      </button>
+
+    </section>
+
+
+    <div class="account-menu">
+
+      <button onclick="accountMessage('Profile')">
+        👤
+        <span>Profile</span>
+        <b>›</b>
+      </button>
+
+      <button onclick="accountMessage('Payment History')">
+        💳
+        <span>Payment History</span>
+        <b>›</b>
+      </button>
+
+      <button onclick="accountMessage('Support')">
+        🎧
+        <span>Support</span>
+        <b>›</b>
+      </button>
+
+      <button onclick="accountMessage('Terms & Conditions')">
+        📄
+        <span>Terms & Conditions</span>
+        <b>›</b>
       </button>
 
     </div>
 
+  </main>
 
-    <!-- IPHONE -->
-    <div class="prize-card">
 
-      <div class="prize-image phone">
-        📱
-      </div>
+  <!-- ================= ENTRY POPUP ================= -->
 
-      <div class="prize-info">
-        <h3>iPhone Pro Max</h3>
-        <p>256GB</p>
+  <div id="entryModal" class="modal">
 
-        <strong>Rs.1 / Entry</strong>
+    <div class="modal-box">
 
-        <small>👤 8,765 Entries</small>
-      </div>
-
-      <button onclick="enterPrize('iPhone Pro Max')">
-        ENTER
+      <button class="close-btn"
+              onclick="closeModal()">
+        ✕
       </button>
 
-    </div>
-
-
-    <!-- SAMSUNG -->
-    <div class="prize-card">
-
-      <div class="prize-image samsung">
-        📱
+      <div class="modal-icon">
+        🎁
       </div>
 
-      <div class="prize-info">
-        <h3>Samsung Galaxy</h3>
-        <p>Ultra 5G</p>
+      <h2 id="selectedPrize">
+        Prize
+      </h2>
 
-        <strong>Rs.1 / Entry</strong>
+      <p>
+        Entry Fee
+      </p>
 
-        <small>👤 6,342 Entries</small>
+      <h3 class="entry-price">
+        Rs.1
+      </h3>
+
+      <label>
+        Number of Entries
+      </label>
+
+      <input
+        id="entryQuantity"
+        type="number"
+        value="1"
+        min="1"
+        max="100"
+        onchange="calculateTotal()"
+      >
+
+      <div class="total-box">
+        Total:
+        <strong id="totalAmount">
+          Rs.1
+        </strong>
       </div>
 
-      <button onclick="enterPrize('Samsung Galaxy')">
-        ENTER
+      <button class="main-btn"
+              onclick="continuePayment()">
+        CONTINUE
       </button>
 
-    </div>
-
-  </section>
-
-
-  <!-- TRUST -->
-  <section class="trust">
-
-    <div class="shield">🛡️</div>
-
-    <div>
-      <h3>Secure & Trusted</h3>
-      <p>Your payment and data are protected.</p>
-    </div>
-
-  </section>
-
-
-  <!-- HOW TO PLAY -->
-  <section class="how">
-
-    <h2>How To Play</h2>
-
-    <div class="steps">
-
-      <div>
-        <span>1</span>
-        <h3>Choose Prize</h3>
-        <p>Select your favorite prize.</p>
-      </div>
-
-      <div>
-        <span>2</span>
-        <h3>Pay Rs.1</h3>
-        <p>Complete your entry.</p>
-      </div>
-
-      <div>
-        <span>3</span>
-        <h3>Get Ticket</h3>
-        <p>Receive your entry number.</p>
-      </div>
-
-      <div>
-        <span>4</span>
-        <h3>Winner</h3>
-        <p>Check the winner announcement.</p>
-      </div>
+      <p class="demo-note">
+        Payment is currently in demo mode.
+      </p>
 
     </div>
 
-  </section>
+  </div>
 
 
-  <!-- BOTTOM NAVIGATION -->
+  <!-- ================= BOTTOM NAV ================= -->
+
   <nav class="bottom-nav">
 
-    <a class="active">
+    <button
+      id="homeNav"
+      class="active"
+      onclick="showPage('home')">
+
       🏠
       <span>Home</span>
-    </a>
 
-    <a>
+    </button>
+
+
+    <button
+      id="prizesNav"
+      onclick="showPage('prizes')">
+
       🎁
       <span>Prizes</span>
-    </a>
 
-    <a>
+    </button>
+
+
+    <button
+      id="entriesNav"
+      onclick="showPage('entries')">
+
       🎟️
       <span>Entries</span>
-    </a>
 
-    <a>
+    </button>
+
+
+    <button
+      id="winnersNav"
+      onclick="showPage('winners')">
+
       🏆
       <span>Winners</span>
-    </a>
 
-    <a>
+    </button>
+
+
+    <button
+      id="accountNav"
+      onclick="showPage('account')">
+
       👤
       <span>Account</span>
-    </a>
+
+    </button>
 
   </nav>
 
 
+  <!-- ================= JAVASCRIPT ================= -->
+
   <script>
-    function enterPrize(prize) {
-      alert(
-        "You selected: " + prize +
-        "\n\nEntry Fee: Rs.1\n\nPayment system will be connected later."
-      );
+
+    /* PAGE NAVIGATION */
+
+    function showPage(page) {
+
+      const pages = [
+        "homePage",
+        "prizesPage",
+        "entriesPage",
+        "winnersPage",
+        "accountPage"
+      ];
+
+      pages.forEach(function(id) {
+
+        document
+          .getElementById(id)
+          .style.display = "none";
+
+      });
+
+
+      const selectedPage =
+        document.getElementById(page + "Page");
+
+      if (selectedPage) {
+        selectedPage.style.display = "block";
+      }
+
+
+      /* Navigation buttons */
+
+      const navButtons = [
+        "homeNav",
+        "prizesNav",
+        "entriesNav",
+        "winnersNav",
+        "accountNav"
+      ];
+
+      navButtons.forEach(function(id) {
+
+        document
+          .getElementById(id)
+          .classList.remove("active");
+
+      });
+
+
+      const activeNav =
+        document.getElementById(page + "Nav");
+
+      if (activeNav) {
+        activeNav.classList.add("active");
+      }
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
     }
+
+
+    /* OPEN ENTRY POPUP */
+
+    function openPrize(prize) {
+
+      document.getElementById(
+        "selectedPrize"
+      ).innerText = prize;
+
+      document.getElementById(
+        "entryQuantity"
+      ).value = 1;
+
+      calculateTotal();
+
+      document.getElementById(
+        "entryModal"
+      ).style.display = "flex";
+
+    }
+
+
+    /* CLOSE POPUP */
+
+    function closeModal() {
+
+      document.getElementById(
+        "entryModal"
+      ).style.display = "none";
+
+    }
+
+
+    /* CALCULATE ENTRY TOTAL */
+
+    function calculateTotal() {
+
+      let quantity =
+        parseInt(
+          document.getElementById(
+            "entryQuantity"
+          ).value
+        ) || 1;
+
+      if (quantity < 1) {
+        quantity = 1;
+      }
+
+      if (quantity > 100) {
+        quantity = 100;
+      }
+
+      document.getElementById(
+        "entryQuantity"
+      ).value = quantity;
+
+      document.getElementById(
+        "totalAmount"
+      ).innerText = "Rs." + quantity;
+
+    }
+
+
+    /* PAYMENT BUTTON */
+
+    function continuePayment() {
+
+      alert(
+        "Demo Mode\n\n" +
+        "Prize: " +
+        document.getElementById(
+          "selectedPrize"
+        ).innerText +
+        "\n\n" +
+        "Total: " +
+        document.getElementById(
+          "totalAmount"
+        ).innerText +
+        "\n\n" +
+        "Real payment system will be connected later."
+      );
+
+    }
+
+
+    /* NOTIFICATION */
+
+    function showNotification() {
+
+      alert(
+        "🔔 Notifications\n\n" +
+        "No new notifications."
+      );
+
+    }
+
+
+    /* LOGIN */
+
+    function loginMessage() {
+
+      alert(
+        "Login / Sign Up\n\n" +
+        "Login system will be added in the next step."
+      );
+
+    }
+
+
+    /* ACCOUNT MENU */
+
+    function accountMessage(item) {
+
+      alert(
+        item +
+        "\n\nThis section will be available after login."
+      );
+
+    }
+
+
+    /* CLOSE MODAL WHEN CLICKING OUTSIDE */
+
+    window.onclick = function(event) {
+
+      const modal =
+        document.getElementById(
+          "entryModal"
+        );
+
+      if (event.target === modal) {
+        closeModal();
+      }
+
+    };
+
+
+    /* START ON HOME */
+
+    showPage("home");
+
   </script>
 
 </body>
-  </html>
+      </html>
