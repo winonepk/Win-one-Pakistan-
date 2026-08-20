@@ -9,48 +9,84 @@
 
 <body>
 
-  <header>
-    <h1>🇵🇰 Winone Pakistan</h1>
-    <p>1 Rupee Entry • Win Amazing Prizes</p>
-  </header>
+<header>
+  <h1>🇵🇰 Winone Pakistan</h1>
+  <p>Win Amazing Prizes</p>
+</header>
 
-  <main>
+<main>
 
-    <div class="prize-card">
-      <h2>📱 Win a Mobile</h2>
+  <div class="prize-card">
 
-      <div class="phone">📱</div>
+    <div class="phone-image">📱</div>
 
-      <h3>Lucky Mobile Draw</h3>
-      <p>Entry Fee: <b>Rs. 1</b></p>
+    <h2>Win a New Mobile</h2>
 
-      <p class="entries">
-        Total Entries: <span id="entries">0</span>
-      </p>
+    <p class="prize-text">Lucky Mobile Draw</p>
 
-      <button onclick="enterDraw()">ENTER NOW — Rs. 1</button>
+    <div class="countdown">
+      <h3>⏳ Draw Countdown</h3>
+      <p id="timer">24:00:00</p>
     </div>
 
-    <div id="message"></div>
+    <div class="stats">
+      <div>
+        <b id="entries">0</b>
+        <small>Total Entries</small>
+      </div>
 
-  </main>
+      <div>
+        <b>1</b>
+        <small>Rupee Entry</small>
+      </div>
+    </div>
 
-  <footer>
-    <p>© 2026 Winone Pakistan</p>
-    <p>Demo Version</p>
-  </footer>
+    <button onclick="enterDraw()">
+      ENTER NOW — Rs. 1
+    </button>
 
-  <script>
-    let entries = 0;
+    <p id="message"></p>
 
-    function enterDraw() {
-      entries++;
-      document.getElementById("entries").innerText = entries;
+  </div>
 
-      document.getElementById("message").innerText =
-        "🎟️ Demo entry added successfully!";
-    }
-  </script>
+</main>
+
+<footer>
+  <p>© 2026 Winone Pakistan</p>
+  <p>Demo Version</p>
+</footer>
+
+<script>
+let entries = 0;
+
+function enterDraw() {
+  entries++;
+  document.getElementById("entries").innerText = entries;
+
+  document.getElementById("message").innerText =
+    "🎟️ Demo entry added successfully!";
+}
+
+let seconds = 24 * 60 * 60;
+
+function updateTimer() {
+  let hours = Math.floor(seconds / 3600);
+  let minutes = Math.floor((seconds % 3600) / 60);
+  let secs = seconds % 60;
+
+  document.getElementById("timer").innerText =
+    String(hours).padStart(2, "0") + ":" +
+    String(minutes).padStart(2, "0") + ":" +
+    String(secs).padStart(2, "0");
+
+  if (seconds > 0) {
+    seconds--;
+  }
+}
+
+setInterval(updateTimer, 1000);
+updateTimer();
+</script>
 
 </body>
 </html>
