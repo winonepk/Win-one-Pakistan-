@@ -1,1 +1,14 @@
-
+{
+  "name": "winone-pakistan-backend",
+  "version": "1.0.0",
+  "description": "WinOne Pakistan backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1"
+  }
+}
