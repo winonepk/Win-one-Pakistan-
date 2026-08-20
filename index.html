@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Easy Win - Rs.1 Mein Jeeto</title>
+  <title>Easy Win - Prize Entry</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -23,14 +23,13 @@
   </header>
 
 
-  <!-- ================= HOME PAGE ================= -->
+  <!-- HOME -->
   <main id="homePage">
 
-    <!-- HERO -->
     <section class="hero">
 
       <h1>
-        SIRF <span>Rs.5</span> MEIN<br>
+        SIRF <span>Rs.1</span> MEIN<br>
         MOBILE YA BIKE<br>
         <strong>JEETO!</strong>
       </h1>
@@ -54,7 +53,8 @@
 
       </div>
 
-      <button class="main-btn" onclick="openPrize('Special Prize')">
+      <button class="main-btn"
+              onclick="openPrize('Samsung Galaxy Ultra 5G', 1)">
         ENTER NOW • Rs.1
       </button>
 
@@ -67,13 +67,14 @@
       <div class="section-title">
         <h2>Live Draws</h2>
 
-        <button class="view-all-btn" onclick="showPage('prizes')">
+        <button class="view-all-btn"
+                onclick="showPage('prizes')">
           View All ›
         </button>
       </div>
 
 
-      <!-- BIKE -->
+      <!-- HONDA -->
       <div class="prize-card">
 
         <div class="prize-image bike">
@@ -92,7 +93,7 @@
 
         </div>
 
-        <button onclick="openPrize('Honda 70 2026 Model')">
+        <button onclick="openPrize('Honda 70 2026 Model', 5)">
           ENTER
         </button>
 
@@ -118,7 +119,7 @@
 
         </div>
 
-        <button onclick="openPrize('iPhone 15 Pro Max 256GB')">
+        <button onclick="openPrize('iPhone 15 Pro Max 256GB', 10)">
           ENTER
         </button>
 
@@ -144,7 +145,7 @@
 
         </div>
 
-        <button onclick="openPrize('Samsung Galaxy Ultra 5G')">
+        <button onclick="openPrize('Samsung Galaxy Ultra 5G', 1)">
           ENTER
         </button>
 
@@ -181,20 +182,20 @@
 
         <div>
           <span>2</span>
-          <h3>Pay Rs.1</h3>
-          <p>Complete your entry.</p>
+          <h3>Select Entries</h3>
+          <p>Choose number of entries.</p>
         </div>
 
         <div>
           <span>3</span>
-          <h3>Get Ticket</h3>
-          <p>Receive your entry number.</p>
+          <h3>Pay</h3>
+          <p>Pay securely.</p>
         </div>
 
         <div>
           <span>4</span>
-          <h3>Winner</h3>
-          <p>Check winner announcement.</p>
+          <h3>Get Ticket</h3>
+          <p>Receive your entry number.</p>
         </div>
 
       </div>
@@ -204,15 +205,19 @@
   </main>
 
 
-  <!-- ================= PRIZES PAGE ================= -->
-
+  <!-- PRIZES PAGE -->
   <main id="prizesPage" class="hidden-page">
 
     <section class="page-header">
-      <button onclick="showPage('home')">←</button>
+
+      <button onclick="showPage('home')">
+        ←
+      </button>
 
       <h2>All Prizes</h2>
+
     </section>
+
 
     <section class="section">
 
@@ -229,7 +234,7 @@
           <small>👤 12,540 Entries</small>
         </div>
 
-        <button onclick="openPrize('Honda 70 2026 Model')">
+        <button onclick="openPrize('Honda 70 2026 Model', 5)">
           ENTER
         </button>
 
@@ -249,7 +254,7 @@
           <small>👤 8,765 Entries</small>
         </div>
 
-        <button onclick="openPrize('iPhone 15 Pro Max 256GB')">
+        <button onclick="openPrize('iPhone 15 Pro Max 256GB', 10)">
           ENTER
         </button>
 
@@ -269,7 +274,7 @@
           <small>👤 6,342 Entries</small>
         </div>
 
-        <button onclick="openPrize('Samsung Galaxy Ultra 5G')">
+        <button onclick="openPrize('Samsung Galaxy Ultra 5G', 1)">
           ENTER
         </button>
 
@@ -280,85 +285,117 @@
   </main>
 
 
-  <!-- ================= ENTRIES PAGE ================= -->
-
+  <!-- ENTRIES PAGE -->
   <main id="entriesPage" class="hidden-page">
 
     <section class="page-header">
-      <button onclick="showPage('home')">←</button>
+
+      <button onclick="showPage('home')">
+        ←
+      </button>
 
       <h2>My Entries</h2>
+
     </section>
 
-    <section class="empty-page">
 
-      <div class="big-icon">🎟️</div>
+    <section id="entriesList" class="winner-list">
 
-      <h2>No Entries Yet</h2>
+      <div class="empty-page">
 
-      <p>
-        Your tickets will appear here after
-        you enter a prize draw.
-      </p>
+        <div class="big-icon">
+          🎟️
+        </div>
 
-      <button class="main-btn small-btn"
-              onclick="showPage('prizes')">
-        VIEW PRIZES
-      </button>
+        <h2>No Entries Yet</h2>
+
+        <p>
+          Your tickets will appear here after
+          successful payment.
+        </p>
+
+        <button class="main-btn small-btn"
+                onclick="showPage('prizes')">
+          VIEW PRIZES
+        </button>
+
+      </div>
 
     </section>
 
   </main>
 
 
-  <!-- ================= WINNERS PAGE ================= -->
-
+  <!-- WINNERS -->
   <main id="winnersPage" class="hidden-page">
 
     <section class="page-header">
-      <button onclick="showPage('home')">←</button>
+
+      <button onclick="showPage('home')">
+        ←
+      </button>
 
       <h2>Winners</h2>
+
     </section>
+
 
     <section class="winner-list">
 
       <div class="winner-card">
-        <div class="winner-avatar">👤</div>
+
+        <div class="winner-avatar">
+          👤
+        </div>
 
         <div>
           <h3>Winner 1</h3>
           <p>Mobile Prize</p>
-          <small>Winner announcement coming soon</small>
+          <small>
+            Winner announcement coming soon
+          </small>
         </div>
 
         <span>🏆</span>
+
       </div>
 
 
       <div class="winner-card">
-        <div class="winner-avatar">👤</div>
+
+        <div class="winner-avatar">
+          👤
+        </div>
 
         <div>
           <h3>Winner 2</h3>
           <p>Bike Prize</p>
-          <small>Winner announcement coming soon</small>
+          <small>
+            Winner announcement coming soon
+          </small>
         </div>
 
         <span>🏆</span>
+
       </div>
 
 
       <div class="winner-card">
-        <div class="winner-avatar">👤</div>
+
+        <div class="winner-avatar">
+          👤
+        </div>
 
         <div>
           <h3>Winner 3</h3>
           <p>Mobile Prize</p>
-          <small>Winner announcement coming soon</small>
+          <small>
+            Winner announcement coming soon
+          </small>
         </div>
 
         <span>🏆</span>
+
       </div>
 
     </section>
@@ -366,15 +403,19 @@
   </main>
 
 
-  <!-- ================= ACCOUNT PAGE ================= -->
-
+  <!-- ACCOUNT -->
   <main id="accountPage" class="hidden-page">
 
     <section class="page-header">
-      <button onclick="showPage('home')">←</button>
+
+      <button onclick="showPage('home')">
+        ←
+      </button>
 
       <h2>Account</h2>
+
     </section>
+
 
     <section class="account-box">
 
@@ -427,8 +468,7 @@
   </main>
 
 
-  <!-- ================= ENTRY POPUP ================= -->
-
+  <!-- ENTRY MODAL -->
   <div id="entryModal" class="modal">
 
     <div class="modal-box">
@@ -438,25 +478,31 @@
         ✕
       </button>
 
+
       <div class="modal-icon">
         🎁
       </div>
+
 
       <h2 id="selectedPrize">
         Prize
       </h2>
 
+
       <p>
         Entry Fee
       </p>
+
 
       <h3 class="entry-price">
         Rs.1
       </h3>
 
+
       <label>
         Number of Entries
       </label>
+
 
       <input
         id="entryQuantity"
@@ -467,20 +513,69 @@
         onchange="calculateTotal()"
       >
 
+
       <div class="total-box">
+
         Total:
+
         <strong id="totalAmount">
           Rs.1
         </strong>
+
       </div>
+
+
+      <!-- PAYMENT METHOD -->
+      <div class="payment-method">
+
+        <h3>
+          Select Payment Method
+        </h3>
+
+
+        <label class="payment-option">
+
+          <input
+            type="radio"
+            name="paymentMethod"
+            value="easypaisa"
+            checked
+          >
+
+          <span>
+            🟢 Easypaisa
+          </span>
+
+        </label>
+
+
+        <label class="payment-option">
+
+          <input
+            type="radio"
+            name="paymentMethod"
+            value="jazzcash"
+          >
+
+          <span>
+            🔵 JazzCash
+          </span>
+
+        </label>
+
+      </div>
+
 
       <button class="main-btn"
               onclick="continuePayment()">
-        CONTINUE
+
+        CONTINUE TO PAYMENT
+
       </button>
 
+
       <p class="demo-note">
-        Payment is currently in demo mode.
+        Secure payment gateway integration.
       </p>
 
     </div>
@@ -488,9 +583,9 @@
   </div>
 
 
-  <!-- ================= BOTTOM NAV ================= -->
-
+  <!-- BOTTOM NAV -->
   <nav class="bottom-nav">
+
 
     <button
       id="homeNav"
@@ -498,7 +593,10 @@
       onclick="showPage('home')">
 
       🏠
-      <span>Home</span>
+
+      <span>
+        Home
+      </span>
 
     </button>
 
@@ -508,7 +606,10 @@
       onclick="showPage('prizes')">
 
       🎁
-      <span>Prizes</span>
+
+      <span>
+        Prizes
+      </span>
 
     </button>
 
@@ -518,7 +619,10 @@
       onclick="showPage('entries')">
 
       🎟️
-      <span>Entries</span>
+
+      <span>
+        Entries
+      </span>
 
     </button>
 
@@ -528,7 +632,10 @@
       onclick="showPage('winners')">
 
       🏆
-      <span>Winners</span>
+
+      <span>
+        Winners
+      </span>
 
     </button>
 
@@ -538,18 +645,31 @@
       onclick="showPage('account')">
 
       👤
-      <span>Account</span>
+
+      <span>
+        Account
+      </span>
 
     </button>
+
 
   </nav>
 
 
-  <!-- ================= JAVASCRIPT ================= -->
-
+  <!-- JAVASCRIPT -->
   <script>
 
-    /* PAGE NAVIGATION */
+    /* =========================
+       GLOBAL VARIABLES
+    ========================= */
+
+    let selectedPrizeName = "";
+    let selectedPrizeFee = 1;
+
+
+    /* =========================
+       PAGE NAVIGATION
+    ========================= */
 
     function showPage(page) {
 
@@ -561,11 +681,15 @@
         "accountPage"
       ];
 
+
       pages.forEach(function(id) {
 
-        document
-          .getElementById(id)
-          .style.display = "none";
+        const element =
+          document.getElementById(id);
+
+        if (element) {
+          element.style.display = "none";
+        }
 
       });
 
@@ -573,12 +697,11 @@
       const selectedPage =
         document.getElementById(page + "Page");
 
+
       if (selectedPage) {
         selectedPage.style.display = "block";
       }
 
-
-      /* Navigation buttons */
 
       const navButtons = [
         "homeNav",
@@ -588,17 +711,22 @@
         "accountNav"
       ];
 
+
       navButtons.forEach(function(id) {
 
-        document
-          .getElementById(id)
-          .classList.remove("active");
+        const button =
+          document.getElementById(id);
+
+        if (button) {
+          button.classList.remove("active");
+        }
 
       });
 
 
       const activeNav =
         document.getElementById(page + "Nav");
+
 
       if (activeNav) {
         activeNav.classList.add("active");
@@ -613,19 +741,33 @@
     }
 
 
-    /* OPEN ENTRY POPUP */
+    /* =========================
+       OPEN PRIZE
+    ========================= */
 
-    function openPrize(prize) {
+    function openPrize(prize, fee) {
+
+      selectedPrizeName = prize;
+      selectedPrizeFee = Number(fee);
+
 
       document.getElementById(
         "selectedPrize"
       ).innerText = prize;
 
+
+      document.querySelector(
+        ".entry-price"
+      ).innerText = "Rs." + selectedPrizeFee;
+
+
       document.getElementById(
         "entryQuantity"
       ).value = 1;
 
+
       calculateTotal();
+
 
       document.getElementById(
         "entryModal"
@@ -634,7 +776,9 @@
     }
 
 
-    /* CLOSE POPUP */
+    /* =========================
+       CLOSE MODAL
+    ========================= */
 
     function closeModal() {
 
@@ -645,7 +789,9 @@
     }
 
 
-    /* CALCULATE ENTRY TOTAL */
+    /* =========================
+       CALCULATE TOTAL
+    ========================= */
 
     function calculateTotal() {
 
@@ -656,48 +802,329 @@
           ).value
         ) || 1;
 
+
       if (quantity < 1) {
         quantity = 1;
       }
+
 
       if (quantity > 100) {
         quantity = 100;
       }
 
+
       document.getElementById(
         "entryQuantity"
       ).value = quantity;
 
+
+      const total =
+        quantity * selectedPrizeFee;
+
+
       document.getElementById(
         "totalAmount"
-      ).innerText = "Rs." + quantity;
+      ).innerText =
+        "Rs." + total;
 
     }
 
 
-    /* PAYMENT BUTTON */
+    /* =========================
+       PAYMENT
+    ========================= */
 
-    function continuePayment() {
+    async function continuePayment() {
 
-      alert(
-        "Demo Mode\n\n" +
-        "Prize: " +
-        document.getElementById(
-          "selectedPrize"
-        ).innerText +
-        "\n\n" +
-        "Total: " +
-        document.getElementById(
-          "totalAmount"
-        ).innerText +
-        "\n\n" +
-        "Real payment system will be connected later."
+      const quantity =
+        Number(
+          document.getElementById(
+            "entryQuantity"
+          ).value
+        );
+
+
+      const paymentMethod =
+        document.querySelector(
+          'input[name="paymentMethod"]:checked'
+        ).value;
+
+
+      const total =
+        quantity * selectedPrizeFee;
+
+
+      /*
+        IMPORTANT:
+
+        Replace /api/create-payment
+        with your real backend URL.
+
+        Your backend will then create
+        the actual JazzCash/Easypaisa
+        payment transaction.
+
+        NEVER put secret API keys here.
+      */
+
+
+      const paymentData = {
+
+        prize: selectedPrizeName,
+
+        entryFee: selectedPrizeFee,
+
+        quantity: quantity,
+
+        total: total,
+
+        paymentMethod: paymentMethod
+
+      };
+
+
+      try {
+
+        /*
+          Backend call
+        */
+
+        const response =
+          await fetch(
+            "/api/create-payment",
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type":
+                  "application/json"
+              },
+
+              body:
+                JSON.stringify(paymentData)
+            }
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            "Payment server unavailable"
+          );
+
+        }
+
+
+        const result =
+          await response.json();
+
+
+        /*
+          Backend should return:
+
+          {
+            success: true,
+            paymentUrl: "..."
+          }
+        */
+
+
+        if (
+          result.success &&
+          result.paymentUrl
+        ) {
+
+          window.location.href =
+            result.paymentUrl;
+
+        } else {
+
+          alert(
+            result.message ||
+            "Unable to start payment."
+          );
+
+        }
+
+
+      } catch (error) {
+
+        console.error(error);
+
+
+        alert(
+          "Payment gateway abhi connect nahi hai.\n\n" +
+          "JazzCash/Easypaisa merchant backend " +
+          "connect karna zaroori hai."
+        );
+
+      }
+
+    }
+
+
+    /* =========================
+       SAVE ENTRY
+    ========================= */
+
+    function saveEntry(
+      prize,
+      quantity,
+      ticketNumbers
+    ) {
+
+      const entries =
+        JSON.parse(
+          localStorage.getItem(
+            "easyWinEntries"
+          )
+        ) || [];
+
+
+      entries.push({
+
+        prize: prize,
+
+        quantity: quantity,
+
+        tickets: ticketNumbers,
+
+        date:
+          new Date().toLocaleString()
+
+      });
+
+
+      localStorage.setItem(
+        "easyWinEntries",
+        JSON.stringify(entries)
       );
 
+
+      loadEntries();
+
     }
 
 
-    /* NOTIFICATION */
+    /* =========================
+       LOAD ENTRIES
+    ========================= */
+
+    function loadEntries() {
+
+      const entries =
+        JSON.parse(
+          localStorage.getItem(
+            "easyWinEntries"
+          )
+        ) || [];
+
+
+      const container =
+        document.getElementById(
+          "entriesList"
+        );
+
+
+      if (!container) {
+        return;
+      }
+
+
+      if (entries.length === 0) {
+
+        container.innerHTML = `
+
+          <div class="empty-page">
+
+            <div class="big-icon">
+              🎟️
+            </div>
+
+            <h2>
+              No Entries Yet
+            </h2>
+
+            <p>
+              Your tickets will appear here
+              after successful payment.
+            </p>
+
+            <button
+              class="main-btn small-btn"
+              onclick="showPage('prizes')">
+
+              VIEW PRIZES
+
+            </button>
+
+          </div>
+
+        `;
+
+        return;
+
+      }
+
+
+      container.innerHTML = "";
+
+
+      entries.forEach(function(entry) {
+
+        const card =
+          document.createElement("div");
+
+
+        card.className =
+          "winner-card";
+
+
+        card.innerHTML = `
+
+          <div class="winner-avatar">
+            🎟️
+          </div>
+
+          <div>
+
+            <h3>
+              ${entry.prize}
+            </h3>
+
+            <p>
+              Entries: ${entry.quantity}
+            </p>
+
+            <small>
+              Ticket: ${entry.tickets.join(", ")}
+            </small>
+
+            <br>
+
+            <small>
+              ${entry.date}
+            </small>
+
+          </div>
+
+          <span>
+            🎫
+          </span>
+
+        `;
+
+
+        container.appendChild(card);
+
+      });
+
+    }
+
+
+    /* =========================
+       NOTIFICATION
+    ========================= */
 
     function showNotification() {
 
@@ -709,51 +1136,66 @@
     }
 
 
-    /* LOGIN */
+    /* =========================
+       LOGIN
+    ========================= */
 
     function loginMessage() {
 
       alert(
         "Login / Sign Up\n\n" +
-        "Login system will be added in the next step."
+        "Login system backend mein add hoga."
       );
 
     }
 
 
-    /* ACCOUNT MENU */
+    /* =========================
+       ACCOUNT MENU
+    ========================= */
 
     function accountMessage(item) {
 
       alert(
         item +
-        "\n\nThis section will be available after login."
+        "\n\n" +
+        "Ye section login ke baad available hoga."
       );
 
     }
 
 
-    /* CLOSE MODAL WHEN CLICKING OUTSIDE */
+    /* =========================
+       CLOSE MODAL OUTSIDE
+    ========================= */
 
-    window.onclick = function(event) {
+    window.onclick =
+      function(event) {
 
-      const modal =
-        document.getElementById(
-          "entryModal"
-        );
-
-      if (event.target === modal) {
-        closeModal();
-      }
-
-    };
+        const modal =
+          document.getElementById(
+            "entryModal"
+          );
 
 
-    /* START ON HOME */
+        if (event.target === modal) {
+
+          closeModal();
+
+        }
+
+      };
+
+
+    /* =========================
+       START
+    ========================= */
+
+    loadEntries();
 
     showPage("home");
 
   </script>
 
 </body>
-      </html>
+        </html>
