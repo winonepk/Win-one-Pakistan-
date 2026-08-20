@@ -1,327 +1,381 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#087f5b">
-
-  <title>Winone Pakistan</title>
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header class="app-header">
-    <div>
-      <h1>🇵🇰 Winone Pakistan</h1>
-      <p>Win Amazing Prizes</p>
-    </div>
-
-    <button class="notification-btn" onclick="showMessage('Notifications coming soon!')">
-      🔔
-    </button>
-  </header>
-
-
-  <!-- Main App -->
-  <main>
-
-    <!-- Home Section -->
-    <section id="home" class="app-section">
-
-      <div class="welcome">
-        <h2>Welcome 👋</h2>
-        <p>Try your luck and win amazing prizes.</p>
-      </div>
-
-
-      <!-- Current Prize -->
-      <div class="prize-card">
-
-        <div class="prize-image">
-          📱
-        </div>
-
-        <span class="badge">CURRENT DRAW</span>
-
-        <h2>Win a New Mobile</h2>
-
-        <p class="prize-description">
-          Enter the lucky draw and get a chance to win an amazing mobile.
-        </p>
-
-        <div class="prize-info">
-
-          <div>
-            <strong>Rs. 1</strong>
-            <small>Demo Entry</small>
-          </div>
-
-          <div>
-            <strong id="totalEntries">0</strong>
-            <small>Total Entries</small>
-          </div>
-
-        </div>
-
-
-        <!-- Countdown -->
-        <div class="countdown-box">
-
-          <h3>⏳ Draw Ends In</h3>
-
-          <div class="timer">
-            <div>
-              <strong id="hours">24</strong>
-              <small>Hours</small>
-            </div>
-
-            <div>
-              <strong id="minutes">00</strong>
-              <small>Minutes</small>
-            </div>
-
-            <div>
-              <strong id="seconds">00</strong>
-              <small>Seconds</small>
-            </div>
-          </div>
-
-        </div>
-
-
-        <button class="primary-btn" onclick="enterDraw()">
-          🎟️ ENTER NOW — Rs. 1
-        </button>
-
-        <p id="entryMessage" class="success-message"></p>
-
-      </div>
-
-    </section>
-
-
-    <!-- My Entries -->
-    <section id="entriesSection" class="app-section hidden">
-
-      <div class="page-title">
-        <h2>🎟️ My Entries</h2>
-        <p>Your demo entries will appear here.</p>
-      </div>
-
-      <div class="empty-card">
-
-        <div class="big-icon">🎟️</div>
-
-        <h3>No Entries Yet</h3>
-
-        <p>
-          Enter the current demo draw to see your entries here.
-        </p>
-
-        <button class="primary-btn" onclick="showSection('home')">
-          View Current Prize
-        </button>
-
-      </div>
-
-    </section>
-
-
-    <!-- Winners -->
-    <section id="winnersSection" class="app-section hidden">
-
-      <div class="page-title">
-        <h2>🏆 Winners</h2>
-        <p>Recent winners will appear here.</p>
-      </div>
-
-      <div class="winner-card">
-
-        <div class="winner-icon">
-          🏆
-        </div>
-
-        <h3>Coming Soon</h3>
-
-        <p>
-          Winner information will be displayed after a completed draw.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- Profile -->
-    <section id="profileSection" class="app-section hidden">
-
-      <div class="page-title">
-        <h2>👤 My Profile</h2>
-        <p>Manage your Winone Pakistan profile.</p>
-      </div>
-
-      <div class="profile-card">
-
-        <div class="profile-avatar">
-          👤
-        </div>
-
-        <h3>Guest User</h3>
-
-        <p>Demo Account</p>
-
-        <div class="profile-row">
-          <span>My Entries</span>
-          <strong id="profileEntries">0</strong>
-        </div>
-
-        <div class="profile-row">
-          <span>Account Status</span>
-          <strong>Active</strong>
-        </div>
-
-      </div>
-
-
-      <!-- Rules -->
-      <div class="rules-card">
-
-        <h3>📜 Rules & Information</h3>
-
-        <p>
-          This is currently a demonstration version of Winone Pakistan.
-          No real-money payment or real prize draw is active.
-        </p>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- Bottom Navigation -->
-  <nav class="bottom-nav">
-
-    <button onclick="showSection('home')" class="nav-item active" id="homeNav">
-      <span>🏠</span>
-      <small>Home</small>
-    </button>
-
-    <button onclick="showSection('entriesSection')" class="nav-item">
-      <span>🎟️</span>
-      <small>Entries</small>
-    </button>
-
-    <button onclick="showSection('winnersSection')" class="nav-item">
-      <span>🏆</span>
-      <small>Winners</small>
-    </button>
-
-    <button onclick="showSection('profileSection')" class="nav-item">
-      <span>👤</span>
-      <small>Profile</small>
-    </button>
-
-  </nav>
-
-
-  <!-- JavaScript -->
-  <script>
-
-    let entries = 0;
-
-    // Enter demo draw
-    function enterDraw() {
-
-      entries++;
-
-      document.getElementById("totalEntries").innerText = entries;
-      document.getElementById("profileEntries").innerText = entries;
-
-      document.getElementById("entryMessage").innerText =
-        "✅ Demo entry added successfully!";
-
-    }
-
-
-    // Show sections
-    function showSection(sectionId) {
-
-      const sections = document.querySelectorAll(".app-section");
-
-      sections.forEach(function(section) {
-        section.classList.add("hidden");
-      });
-
-
-      if (sectionId === "home") {
-
-        document.getElementById("home").classList.remove("hidden");
-
-      } else {
-
-        document.getElementById(sectionId).classList.remove("hidden");
-
-      }
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
-    }
-
-
-    // Notification demo
-    function showMessage(message) {
-
-      alert(message);
-
-    }
-
-
-    // Countdown
-    let remainingSeconds = 24 * 60 * 60;
-
-    function updateCountdown() {
-
-      let hours = Math.floor(remainingSeconds / 3600);
-
-      let minutes =
-        Math.floor((remainingSeconds % 3600) / 60);
-
-      let seconds =
-        remainingSeconds % 60;
-
-
-      document.getElementById("hours").innerText =
-        String(hours).padStart(2, "0");
-
-      document.getElementById("minutes").innerText =
-        String(minutes).padStart(2, "0");
-
-      document.getElementById("seconds").innerText =
-        String(seconds).padStart(2, "0");
-
-
-      if (remainingSeconds > 0) {
-
-        remainingSeconds--;
-
-      }
-
-    }
-
-
-    setInterval(updateCountdown, 1000);
-
-    updateCountdown();
-
-  </script>
-
-</body>
-</html>
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const EasyWinApp());
+}
+
+class EasyWinApp extends StatelessWidget {
+  const EasyWinApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Easy Win',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF4B1FA7),
+        ),
+      ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFF7F5FB),
+
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF4B1FA7),
+        foregroundColor: Colors.white,
+        title: const Row(
+          children: [
+            Icon(Icons.card_giftcard, color: Colors.amber),
+            SizedBox(width: 8),
+            Text(
+              'EASY WIN',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.notifications_none),
+          ),
+        ],
+      ),
+
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+
+            // HERO SECTION
+            Container(
+              width: double.infinity,
+              margin: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(22),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [
+                    Color(0xFF240852),
+                    Color(0xFF6624BD),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: Column(
+                children: [
+                  const Text(
+                    'SIRF Rs.1 MEIN\nMOBILE YA BIKE\nJEETO!',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+
+                  const SizedBox(height: 25),
+
+                  Row(
+                    mainAxisAlignment:
+                        MainAxisAlignment.spaceEvenly,
+                    children: const [
+                      PrizeIcon(
+                        icon: Icons.two_wheeler,
+                        text: 'BIKE',
+                      ),
+                      PrizeIcon(
+                        icon: Icons.phone_iphone,
+                        text: 'MOBILE',
+                      ),
+                      PrizeIcon(
+                        icon: Icons.card_giftcard,
+                        text: 'PRIZE',
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 25),
+
+                  SizedBox(
+                    width: double.infinity,
+                    height: 55,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.amber,
+                        foregroundColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.circular(15),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) =>
+                                const PrizesPage(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'ENTER NOW • Rs.1',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 18),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Live Draws',
+                  style: TextStyle(
+                    fontSize: 21,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 10),
+
+            PrizeCard(
+              name: 'Honda CG 125',
+              detail: '2026 Model',
+              icon: Icons.two_wheeler,
+            ),
+
+            PrizeCard(
+              name: 'iPhone Pro Max',
+              detail: '256GB',
+              icon: Icons.phone_iphone,
+            ),
+
+            PrizeCard(
+              name: 'Samsung Galaxy',
+              detail: 'Ultra 5G',
+              icon: Icons.phone_android,
+            ),
+
+            const SizedBox(height: 20),
+          ],
+        ),
+      ),
+
+      bottomNavigationBar: NavigationBar(
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Prizes',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.confirmation_number_outlined),
+            label: 'Entries',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.emoji_events_outlined),
+            label: 'Winners',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.person_outline),
+            label: 'Account',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class PrizeIcon extends StatelessWidget {
+  final IconData icon;
+  final String text;
+
+  const PrizeIcon({
+    super.key,
+    required this.icon,
+    required this.text,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        CircleAvatar(
+          radius: 32,
+          backgroundColor: Colors.white24,
+          child: Icon(
+            icon,
+            color: Colors.white,
+            size: 34,
+          ),
+        ),
+        const SizedBox(height: 7),
+        Text(
+          text,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class PrizeCard extends StatelessWidget {
+  final String name;
+  final String detail;
+  final IconData icon;
+
+  const PrizeCard({
+    super.key,
+    required this.name,
+    required this.detail,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.symmetric(
+        horizontal: 15,
+        vertical: 7,
+      ),
+      elevation: 0,
+      child: Padding(
+        padding: const EdgeInsets.all(15),
+        child: Row(
+          children: [
+
+            Container(
+              width: 85,
+              height: 85,
+              decoration: BoxDecoration(
+                color: const Color(0xFFEDE6FF),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Icon(
+                icon,
+                size: 50,
+                color: const Color(0xFF4B1FA7),
+              ),
+            ),
+
+            const SizedBox(width: 15),
+
+            Expanded(
+              child: Column(
+                crossAxisAlignment:
+                    CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    name,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  Text(
+                    detail,
+                    style: TextStyle(
+                      color: Colors.grey.shade600,
+                    ),
+                  ),
+
+                  const SizedBox(height: 5),
+
+                  const Text(
+                    'Rs.1 / Entry',
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  const SizedBox(height: 8),
+
+                  ElevatedButton(
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (_) => AlertDialog(
+                          title: Text(name),
+                          content: const Text(
+                            'Entry fee: Rs.1\n\n'
+                            'Payment system is currently demo only.',
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () =>
+                                  Navigator.pop(context),
+                              child: const Text('CLOSE'),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                    child: const Text('ENTER'),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PrizesPage extends StatelessWidget {
+  const PrizesPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('All Prizes'),
+      ),
+      body: ListView(
+        children: const [
+          PrizeCard(
+            name: 'Honda CG 125',
+            detail: '2026 Model',
+            icon: Icons.two_wheeler,
+          ),
+          PrizeCard(
+            name: 'iPhone Pro Max',
+            detail: '256GB',
+            icon: Icons.phone_iphone,
+          ),
+          PrizeCard(
+            name: 'Samsung Galaxy',
+            detail: 'Ultra 5G',
+            icon: Icons.phone_android,
+          ),
+        ],
+      ),
+    );
+  }
+}
