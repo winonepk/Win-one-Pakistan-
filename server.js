@@ -1,35 +1,21 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
+const path = require("path");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
-
-
-/* =========================
-   TEST / HEALTH CHECK
-========================= */
+app.use(express.static(path.join(__dirname)));
 
 app.get("/", (req, res) => {
-  res.json({
-    success: true,
-    message: "WinOne Pakistan backend is running!"
-  });
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
-
-/* =========================
-   PAYMENT ENDPOINT
-========================= */
-
 app.post("/api/create-payment", async (req, res) => {
-
   try {
-
     const {
       prize,
       entryFee,
@@ -37,7 +23,6 @@ app.post("/api/create-payment", async (req, res) => {
       total,
       paymentMethod
     } = req.body;
-
 
     if (
       !prize ||
@@ -52,7 +37,6 @@ app.post("/api/create-payment", async (req, res) => {
       });
     }
 
-
     if (
       paymentMethod !== "easypaisa" &&
       paymentMethod !== "jazzcash"
@@ -63,5 +47,32 @@ app.post("/api/create-payment", async (req, res) => {
       });
     }
 
+    console.log("Payment request:", {
+      prize,
+      entryFee,
+      quantity,
+      total,
+      paymentMethod
+    });
 
-   
+    return res.json({
+      success: false,
+      message:
+        "Payment gateway is not connected yet. Merchant credentials are required."
+    });
+
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Server error."
+    });
+  }
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`WinOne server running on port ${PORT}`);
+});
