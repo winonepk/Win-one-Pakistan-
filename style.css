@@ -11,20 +11,15 @@ body {
   padding-bottom: 80px;
 }
 
-
-/* ================= HEADER ================= */
-
+/* HEADER */
 .header {
   height: 70px;
   background: linear-gradient(135deg, #250852, #6120b7);
   color: white;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 0 20px;
-
   position: sticky;
   top: 0;
   z-index: 10;
@@ -47,35 +42,17 @@ body {
   cursor: pointer;
 }
 
-
-/* ================= HERO ================= */
-
+/* HERO */
 .hero {
   margin: 18px 14px;
-
   padding: 30px 20px 22px;
-
   text-align: center;
-
   border-radius: 25px;
-
   background:
-    radial-gradient(
-      circle at 20% 20%,
-      #7029cf,
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #21064e,
-      #641dbb
-    );
-
+    radial-gradient(circle at 20% 20%, #7029cf, transparent 30%),
+    linear-gradient(135deg, #21064e, #641dbb);
   color: white;
-
-  box-shadow:
-    0 8px 25px
-    rgba(60, 15, 130, .25);
+  box-shadow: 0 8px 25px rgba(60, 15, 130, 0.25);
 }
 
 .hero h1 {
@@ -93,9 +70,7 @@ body {
   font-size: 42px;
 }
 
-
-/* ================= PRIZE ICONS ================= */
-
+/* PRIZE ICONS */
 .prize-icons {
   display: flex;
   justify-content: space-around;
@@ -110,53 +85,37 @@ body {
 .circle {
   width: 65px;
   height: 65px;
-
   border-radius: 50%;
-
-  background:
-    rgba(255,255,255,.15);
-
+  background: rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 34px;
-
-  border:
-    1px solid
-    rgba(255,255,255,.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
-/* ================= MAIN BUTTON ================= */
-
+/* BUTTON */
 .main-btn {
   width: 100%;
   height: 55px;
-
   border: none;
   border-radius: 14px;
-
   background: #ffc400;
   color: #111;
-
   font-size: 17px;
   font-weight: 900;
-
   cursor: pointer;
 }
 
 .main-btn:active {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 .small-btn {
   max-width: 220px;
 }
 
-
-/* ================= SECTIONS ================= */
-
+/* SECTIONS */
 .section {
   padding: 0 15px;
 }
@@ -165,7 +124,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin: 20px 3px 12px;
 }
 
@@ -176,48 +134,32 @@ body {
 .view-all-btn {
   border: none;
   background: transparent;
-
   color: #4b1fa7;
-
   font-weight: bold;
   font-size: 14px;
-
   cursor: pointer;
 }
 
-
-/* ================= PRIZE CARD ================= */
-
+/* PRIZE CARD */
 .prize-card {
   background: white;
-
   border-radius: 18px;
-
   padding: 14px;
-
   margin-bottom: 12px;
-
   display: flex;
   align-items: center;
-
   gap: 13px;
-
-  box-shadow:
-    0 3px 15px
-    rgba(0,0,0,.06);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
 }
 
 .prize-image {
   min-width: 80px;
   width: 80px;
   height: 80px;
-
   border-radius: 15px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 43px;
 }
 
@@ -259,35 +201,22 @@ body {
 
 .prize-card button {
   background: #4b1fa7;
-
   color: white;
-
   border: none;
-
   border-radius: 9px;
-
   padding: 11px 14px;
-
   font-weight: bold;
-
   cursor: pointer;
 }
 
-
-/* ================= TRUST ================= */
-
+/* TRUST */
 .trust {
   margin: 20px 15px;
-
   padding: 15px;
-
   display: flex;
   align-items: center;
-
   gap: 15px;
-
   background: #eee7ff;
-
   border-radius: 15px;
 }
 
@@ -301,20 +230,14 @@ body {
 
 .trust p {
   color: #666;
-
   font-size: 13px;
-
   margin-top: 4px;
 }
 
-
-/* ================= HOW TO PLAY ================= */
-
+/* HOW TO PLAY */
 .how {
   background: white;
-
   padding: 25px 15px;
-
   margin-top: 20px;
 }
 
@@ -325,37 +248,26 @@ body {
 
 .steps {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
 .steps div {
   background: #f7f3ff;
-
   padding: 15px;
-
   border-radius: 14px;
 }
 
 .steps span {
   width: 32px;
   height: 32px;
-
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: #4b1fa7;
-
   color: white;
-
   font-weight: bold;
-
   margin-bottom: 8px;
 }
 
@@ -365,45 +277,29 @@ body {
 
 .steps p {
   font-size: 12px;
-
   color: #777;
-
   margin-top: 5px;
 }
 
-
-/* ================= PAGE HEADER ================= */
-
+/* PAGE HEADER */
 .page-header {
   height: 65px;
-
   background: white;
-
   display: flex;
   align-items: center;
-
   gap: 15px;
-
   padding: 0 15px;
-
-  border-bottom:
-    1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .page-header button {
   width: 40px;
   height: 40px;
-
   border: none;
-
   border-radius: 10px;
-
   background: #f1ebff;
-
   color: #4b1fa7;
-
   font-size: 22px;
-
   cursor: pointer;
 }
 
@@ -411,27 +307,19 @@ body {
   font-size: 21px;
 }
 
-
-/* ================= HIDDEN PAGE ================= */
-
+/* HIDDEN PAGE */
 .hidden-page {
   display: none;
 }
 
-
-/* ================= EMPTY PAGE ================= */
-
+/* EMPTY PAGE */
 .empty-page {
   min-height: 55vh;
-
   padding: 40px 25px;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   text-align: center;
 }
 
@@ -441,58 +329,40 @@ body {
 
 .empty-page p {
   color: #777;
-
   max-width: 320px;
-
   line-height: 1.5;
-
   margin-bottom: 25px;
 }
 
 .big-icon {
   font-size: 60px;
-
   margin-bottom: 15px;
 }
 
-
-/* ================= WINNERS ================= */
-
+/* WINNERS */
 .winner-list {
   padding: 15px;
 }
 
 .winner-card {
   background: white;
-
   border-radius: 16px;
-
   padding: 15px;
-
   margin-bottom: 12px;
-
   display: flex;
   align-items: center;
-
   gap: 12px;
-
-  box-shadow:
-    0 3px 15px
-    rgba(0,0,0,.05);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
 }
 
 .winner-avatar {
   width: 48px;
   height: 48px;
-
   border-radius: 50%;
-
   background: #eee7ff;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 24px;
 }
 
@@ -506,13 +376,11 @@ body {
 
 .winner-card p {
   color: #666;
-
   margin-top: 3px;
 }
 
 .winner-card small {
   color: #888;
-
   font-size: 11px;
 }
 
@@ -520,45 +388,30 @@ body {
   font-size: 24px;
 }
 
-
-/* ================= ACCOUNT ================= */
-
+/* ACCOUNT */
 .account-box {
   background: white;
-
   margin: 15px;
-
   padding: 30px 20px;
-
   border-radius: 18px;
-
   text-align: center;
-
-  box-shadow:
-    0 3px 15px
-    rgba(0,0,0,.05);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
 }
 
 .profile-icon {
   width: 75px;
   height: 75px;
-
   margin: auto auto 15px;
-
   border-radius: 50%;
-
   background: #eee7ff;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 38px;
 }
 
 .account-box p {
   color: #777;
-
   margin: 8px 0 20px;
 }
 
@@ -568,25 +421,15 @@ body {
 
 .account-menu button {
   width: 100%;
-
   height: 55px;
-
   background: white;
-
   border: none;
-
-  border-bottom:
-    1px solid #eee;
-
+  border-bottom: 1px solid #eee;
   display: flex;
   align-items: center;
-
   gap: 12px;
-
   padding: 0 15px;
-
   font-size: 16px;
-
   cursor: pointer;
 }
 
@@ -600,92 +443,59 @@ body {
   color: #777;
 }
 
-
-/* ================= ENTRY MODAL ================= */
-
+/* ENTRY MODAL */
 .modal {
   display: none;
-
   position: fixed;
-
   inset: 0;
-
-  background:
-    rgba(0,0,0,.55);
-
+  background: rgba(0, 0, 0, 0.55);
   z-index: 100;
-
   align-items: center;
   justify-content: center;
-
   padding: 20px;
 }
 
 .modal-box {
   width: 100%;
   max-width: 420px;
-
   max-height: 90vh;
-
   overflow-y: auto;
-
   background: white;
-
   border-radius: 22px;
-
   padding: 25px 20px;
-
   text-align: center;
-
   position: relative;
-
-  box-shadow:
-    0 15px 50px
-    rgba(0,0,0,.25);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
 }
 
 .close-btn {
   position: absolute;
-
   top: 12px;
   right: 12px;
-
   width: 35px;
   height: 35px;
-
   border: none;
-
   border-radius: 50%;
-
   background: #f1f1f1;
-
   cursor: pointer;
-
   font-size: 17px;
 }
 
 .modal-icon {
   width: 65px;
   height: 65px;
-
   margin: 5px auto 15px;
-
   border-radius: 50%;
-
   background: #eee7ff;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 32px;
 }
 
 .modal-box h2 {
   font-size: 20px;
-
   margin-bottom: 10px;
-
   color: #30106d;
 }
 
@@ -695,177 +505,113 @@ body {
 
 .entry-price {
   color: #008a3b;
-
   font-size: 26px;
-
   margin: 5px 0 20px;
 }
 
 .modal-box label {
   display: block;
-
   text-align: left;
-
   font-size: 14px;
-
   font-weight: bold;
-
   margin-bottom: 7px;
 }
 
 #entryQuantity {
   width: 100%;
-
   height: 48px;
-
   border: 1px solid #ddd;
-
   border-radius: 10px;
-
   padding: 0 12px;
-
   font-size: 17px;
-
   margin-bottom: 15px;
 }
 
 .total-box {
   background: #f5f0ff;
-
   border-radius: 12px;
-
   padding: 14px;
-
   margin-bottom: 18px;
-
   font-size: 16px;
 }
 
 .total-box strong {
   color: #4b1fa7;
-
   font-size: 20px;
-
   margin-left: 5px;
 }
 
-
-/* ================= PAYMENT METHOD ================= */
-
+/* PAYMENT METHOD */
 .payment-method {
   margin: 15px 0 20px;
-
   text-align: left;
 }
 
 .payment-method h3 {
   font-size: 15px;
-
   margin-bottom: 10px;
-
   color: #333;
 }
 
 .payment-option {
   width: 100%;
-
   min-height: 52px;
-
   display: flex;
   align-items: center;
-
   gap: 10px;
-
   background: #f8f8f8;
-
   border: 1px solid #e3e3e3;
-
   border-radius: 12px;
-
   padding: 0 14px;
-
   margin-bottom: 8px;
-
   cursor: pointer;
-
   font-weight: bold;
 }
 
 .payment-option:has(input:checked) {
   border-color: #4b1fa7;
-
   background: #f1ebff;
 }
 
 .payment-option input {
   width: 18px;
   height: 18px;
-
   accent-color: #4b1fa7;
 }
 
 .demo-note {
   font-size: 11px;
-
   color: #999;
-
   margin-top: 12px;
 }
 
-
-/* ================= BOTTOM NAV ================= */
-
+/* BOTTOM NAV */
 .bottom-nav {
   position: fixed;
-
   bottom: 0;
   left: 0;
   right: 0;
-
   height: 70px;
-
   background: white;
-
   border-top: 1px solid #ddd;
-
   display: flex;
-
   justify-content: space-around;
-
   align-items: center;
-
   z-index: 20;
 }
 
-
-/* IMPORTANT:
-   index.html uses BUTTON,
-   not A
-*/
-
 .bottom-nav button {
   flex: 1;
-
   height: 100%;
-
   background: transparent;
-
   border: none;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 4px;
-
   font-size: 21px;
-
   color: #555;
-
   cursor: pointer;
 }
 
@@ -875,41 +621,26 @@ body {
 
 .bottom-nav button.active {
   color: #4b1fa7;
-
   font-weight: bold;
 }
 
-
-/* ================= MOBILE / DESKTOP ================= */
-
+/* RESPONSIVE */
 @media (min-width: 700px) {
-
   body {
     max-width: 500px;
-
     margin: auto;
-
-    box-shadow:
-      0 0 30px
-      rgba(0,0,0,.08);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
   }
 
   .header {
-    border-radius:
-      0 0 15px 15px;
+    border-radius: 0 0 15px 15px;
   }
 
   .bottom-nav {
     max-width: 500px;
-
     left: 50%;
-
     right: auto;
-
-    transform:
-      translateX(-50%);
-
+    transform: translateX(-50%);
     width: 100%;
   }
-
-    }
+}
