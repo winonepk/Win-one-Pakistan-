@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Winone Pakistan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winone Pakistan</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Welcome to Winone Pakistan</h1>
-    <p>My app is coming soon!</p>
+
+  <header>
+    <h1>🇵🇰 Winone Pakistan</h1>
+    <p>1 Rupee Entry • Win Amazing Prizes</p>
+  </header>
+
+  <main>
+
+    <div class="prize-card">
+      <h2>📱 Win a Mobile</h2>
+
+      <div class="phone">📱</div>
+
+      <h3>Lucky Mobile Draw</h3>
+      <p>Entry Fee: <b>Rs. 1</b></p>
+
+      <p class="entries">
+        Total Entries: <span id="entries">0</span>
+      </p>
+
+      <button onclick="enterDraw()">ENTER NOW — Rs. 1</button>
+    </div>
+
+    <div id="message"></div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Winone Pakistan</p>
+    <p>Demo Version</p>
+  </footer>
+
+  <script>
+    let entries = 0;
+
+    function enterDraw() {
+      entries++;
+      document.getElementById("entries").innerText = entries;
+
+      document.getElementById("message").innerText =
+        "🎟️ Demo entry added successfully!";
+    }
+  </script>
+
 </body>
 </html>
