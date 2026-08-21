@@ -644,3 +644,24 @@ body {
     width: 100%;
   }
 }
+.prize-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 15px;
+}
+
+.prize-image.vivo {
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prize-image.vivo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
